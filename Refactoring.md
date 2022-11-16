@@ -9,3 +9,8 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. I used guard clauses instead of if nesting. This makes it easier to follow the logic of the function from the top down.
+2. I avoided reassigning the `candidate` variable and instead returned early each step of the way.
+3. I used destructuring to get the `candidate` variable from `event`. This is not necessary more readable, but I find it cleaner than accessing properties.
+4. I only reduced the overall footprint by one line. Readability is not always about less lines.
